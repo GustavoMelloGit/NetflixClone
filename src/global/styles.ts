@@ -9,6 +9,12 @@ const GlobalStyle = createGlobalStyle`
     a{
         text-decoration: none;
     }
+    body{
+        font-family: 'Roboto', sans-serif;
+    }
+    .pointer{
+        cursor: pointer;
+    }
 `;
 
 export default GlobalStyle;
