@@ -27,6 +27,9 @@ export const FormTitle = styled.h1`
 
 export const MyForm = styled(Form)`
   > div:not(:last-child) {
-    margin-bottom: 2rem;
+    margin-bottom: 1.2rem;
+  }
+  > button:last-child {
+    margin-top: 1.4rem;
   }
 `;

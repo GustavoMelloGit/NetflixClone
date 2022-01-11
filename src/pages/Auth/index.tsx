@@ -4,6 +4,7 @@ import * as yup from 'yup';
 import { Formik } from 'formik';
 import FormikInputText from '../../components/Inputs/FormikInputText';
 import FormikInputPassword from '../../components/Inputs/FormikInputPassword';
+import LoginButton from '../../components/Button/Login';
 
 const LoginPage: React.FC = (props) => {
   const validationSchema = yup.object({
@@ -24,6 +25,7 @@ const LoginPage: React.FC = (props) => {
           <MyForm>
             <FormikInputText name='email' label='E-mail' />
             <FormikInputPassword name='password' label='Senha' />
+            <LoginButton type='submit' aria-label='Realizar login' />
           </MyForm>
         </Formik>
       </CardContainer>
