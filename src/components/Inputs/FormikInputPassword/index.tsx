@@ -1,8 +1,8 @@
 import { TextFieldProps } from '@mui/material';
 import { useField } from 'formik';
 import React, { useState } from 'react';
-import { MyPasswordField } from './styles';
 import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai';
+import { FormikInputContainer } from '../styles';
 
 type IFormikInputPasswordProps = TextFieldProps & {
   name: string;
@@ -17,7 +17,7 @@ const FormikInputPassword: React.FC<IFormikInputPasswordProps> = (props) => {
     setTextVisible((prev) => !prev);
   }
   return (
-    <MyPasswordField
+    <FormikInputContainer
       variant='filled'
       InputLabelProps={{ style: { color: '#818C8C' } }}
       inputProps={{ style: { color: '#fff' } }}

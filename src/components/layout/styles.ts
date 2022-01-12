@@ -30,7 +30,7 @@ export const Navbar = styled.nav`
   padding: 1.3rem max(20px, 3vw);
   svg {
     cursor: pointer;
-    width: 10rem;
+    width: 10.4rem;
     height: fit-content;
   }
 `;

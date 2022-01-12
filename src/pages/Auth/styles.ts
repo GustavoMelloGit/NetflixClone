@@ -1,5 +1,9 @@
 import styled from 'styled-components';
+import { FormikInputContainer } from './../../components/Inputs/styles';
 import { Form } from 'formik';
+import { LoginButtonContainer } from '../../components/Button/Login/styles';
+import { Checkbox } from '@mui/material';
+import { Colors } from '../../Constants/Enum/Colors';
 
 export const LoginPageContainer = styled.div`
   width: 100%;
@@ -26,10 +30,28 @@ export const FormTitle = styled.h1`
 `;
 
 export const MyForm = styled(Form)`
-  > div:not(:last-child) {
+  ${FormikInputContainer}:not(:last-child) {
     margin-bottom: 1.2rem;
   }
-  > button:last-child {
+  ${LoginButtonContainer}:last-child {
     margin-top: 1.4rem;
+  }
+`;
+
+export const ActionsWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  color: ${Colors.text};
+`;
+
+export const ForgotPassword = styled.div`
+  display: flex;
+  align-items: center;
+`;
+export const MyCheckbox = styled(Checkbox)`
+  svg {
+    fill: ${Colors.text};
   }
 `;
