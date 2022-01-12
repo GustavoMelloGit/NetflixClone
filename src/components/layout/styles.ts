@@ -7,7 +7,10 @@ export const LayoutContainer = styled.main`
   overflow: hidden;
   position: relative;
   background-color: black;
-  img {
+`;
+
+export const MyPicture = styled.picture`
+  > img {
     opacity: 0.5;
     position: absolute;
     width: 100%;

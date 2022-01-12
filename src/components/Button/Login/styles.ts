@@ -11,4 +11,8 @@ export const LoginButtonContainer = styled.button`
   font-size: 1.1em;
   font-weight: bold;
   border-radius: 0.3rem;
+
+  :focus {
+    outline: 1px dashed white;
+  }
 `;

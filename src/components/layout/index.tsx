@@ -4,6 +4,7 @@ import {
   Footer,
   LayoutContainer,
   LayoutContent,
+  MyPicture,
   Navbar,
 } from './styles';
 import background_small from '../../global/assets/background_small.jpg';
@@ -14,11 +15,11 @@ import { ReactComponent as Netflix } from '../../global/assets/Netflix.svg';
 const LayoutComponent: React.FC = (props) => {
   return (
     <LayoutContainer>
-      <picture>
+      <MyPicture>
         <source media='(min-width: 1800px)' srcSet={background_large} />
         <source media='(min-width: 1500px)' srcSet={background_medium} />
         <img src={background_small} alt='Background' />
-      </picture>
+      </MyPicture>
       <LayoutContent>
         <Navbar>
           <Netflix />
