@@ -20,8 +20,17 @@ import FormikInputPassword from '../../components/Inputs/FormikInputPassword';
 import LoginButton from '../../components/Button/Login';
 import Facebook from '../../global/assets/facebook.png';
 import { FormControlLabel } from '@mui/material';
+import toast from 'react-hot-toast';
 
 const LoginPage: React.FC = (props) => {
+  function handleSubmit() {
+    toast.success('Obrigado por conhecer meu trabalho!');
+    setTimeout(() => {
+      window.location.replace(
+        'https://www.linkedin.com/in/gustavo-marques-mello/'
+      );
+    }, 2100);
+  }
   const validationSchema = yup.object({
     email: yup.string().email().required('Informe um email válido.'),
     password: yup
@@ -36,7 +45,7 @@ const LoginPage: React.FC = (props) => {
           <Formik
             validationSchema={validationSchema}
             initialValues={{ email: '', password: '' }}
-            onSubmit={(values) => console.log(values)}
+            onSubmit={() => handleSubmit()}
           >
             <MyForm>
               <FormikInputText name='email' label='E-mail' />
