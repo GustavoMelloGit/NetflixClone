@@ -9,6 +9,7 @@ import { Breakpoints } from '../../Constants/Enum/Breakpoints';
 export const LoginPageContainer = styled.div`
   width: 100%;
   height: 100%;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,6 +17,8 @@ export const LoginPageContainer = styled.div`
 `;
 
 export const CardContainer = styled.div`
+  margin-top: 90px;
+  margin-bottom: 110px;
   width: 450px;
   height: 660px;
   background: rgba(0, 0, 0, 0.8);

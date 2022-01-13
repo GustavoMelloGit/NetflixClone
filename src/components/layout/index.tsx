@@ -1,37 +1,27 @@
 import React from 'react';
 import {
   BackgroundContainer,
-  ChildrenWrapper,
-  Footer,
+  ContentContainer,
   LayoutContainer,
-  LayoutContent,
-  MyPicture,
-  Navbar,
 } from './styles';
 import background_small from '../../global/assets/background_small.jpg';
 import background_medium from '../../global/assets/background_medium.jpg';
 import background_large from '../../global/assets/background_large.jpg';
-import { ReactComponent as Netflix } from '../../global/assets/Netflix.svg';
+import { Footer, Navbar } from './Components';
 
 const LayoutComponent: React.FC = (props) => {
   return (
     <LayoutContainer>
       <BackgroundContainer>
-        <MyPicture>
+        <picture>
           <source media='(min-width: 1800px)' srcSet={background_large} />
           <source media='(min-width: 1500px)' srcSet={background_medium} />
           <img src={background_small} alt='Background' />
-        </MyPicture>
+        </picture>
       </BackgroundContainer>
-      <LayoutContent>
-        <Navbar>
-          <Netflix />
-        </Navbar>
-        <ChildrenWrapper>{props.children}</ChildrenWrapper>
-        <Footer>
-          <span>Made by Gustavo Marques ❤️</span>
-        </Footer>
-      </LayoutContent>
+      <Navbar />
+      <ContentContainer>{props.children}</ContentContainer>
+      <Footer />
     </LayoutContainer>
   );
 };

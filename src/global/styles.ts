@@ -11,6 +11,10 @@ const GlobalStyle = createGlobalStyle`
     }
     body{
         font-family: 'Roboto', sans-serif;
+        height: 100%;
+    }
+    #root{
+        height: 100%;
     }
     .pointer{
         cursor: pointer;
