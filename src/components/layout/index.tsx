@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+  BackgroundContainer,
   ChildrenWrapper,
   Footer,
   LayoutContainer,
@@ -15,11 +16,13 @@ import { ReactComponent as Netflix } from '../../global/assets/Netflix.svg';
 const LayoutComponent: React.FC = (props) => {
   return (
     <LayoutContainer>
-      <MyPicture>
-        <source media='(min-width: 1800px)' srcSet={background_large} />
-        <source media='(min-width: 1500px)' srcSet={background_medium} />
-        <img src={background_small} alt='Background' />
-      </MyPicture>
+      <BackgroundContainer>
+        <MyPicture>
+          <source media='(min-width: 1800px)' srcSet={background_large} />
+          <source media='(min-width: 1500px)' srcSet={background_medium} />
+          <img src={background_small} alt='Background' />
+        </MyPicture>
+      </BackgroundContainer>
       <LayoutContent>
         <Navbar>
           <Netflix />

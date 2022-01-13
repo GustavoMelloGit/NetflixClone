@@ -5,17 +5,23 @@ export const LayoutContainer = styled.main`
   width: 100%;
   max-width: 100vw;
   height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
   position: relative;
   background-color: black;
+`;
+
+export const BackgroundContainer = styled.div`
+  height: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  position: absolute;
 `;
 
 export const MyPicture = styled.picture`
   > img {
     opacity: 0.5;
-    position: absolute;
-    width: 100%;
-    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
     object-fit: cover;
   }
 `;
@@ -47,8 +53,12 @@ export const Footer = styled.div`
   align-items: center;
   width: 100%;
   background: rgba(0, 0, 0, 0.5);
-  height: 7rem;
+  height: max(7rem, 4vh);
   span {
     color: white;
+  }
+
+  @media screen and (max-width: ${Breakpoints.mobile}) {
+    height: 8vh;
   }
 `;

@@ -34,6 +34,9 @@ export const CardContent = styled.div`
   > :nth-child(3) {
     margin-top: 4rem;
   }
+  @media screen and (max-width: ${Breakpoints.mobile}) {
+    padding: 1rem;
+  }
 `;
 
 export const FormTitle = styled.h1`
