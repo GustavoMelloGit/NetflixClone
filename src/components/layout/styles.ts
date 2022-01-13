@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Breakpoints } from '../../Constants/Enum/Breakpoints';
 
 export const LayoutContainer = styled.main`
   width: 100%;

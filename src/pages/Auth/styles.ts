@@ -4,6 +4,7 @@ import { Form } from 'formik';
 import { LoginButtonContainer } from '../../components/Button/Login/styles';
 import { Checkbox } from '@mui/material';
 import { Colors } from '../../Constants/Enum/Colors';
+import { Breakpoints } from '../../Constants/Enum/Breakpoints';
 
 export const LoginPageContainer = styled.div`
   width: 100%;
@@ -19,6 +20,11 @@ export const CardContainer = styled.div`
   height: 660px;
   background: rgba(0, 0, 0, 0.8);
   border-radius: 4px;
+  @media screen and (max-width: ${Breakpoints.mobile}) {
+    width: 100%;
+    height: 100%;
+    background: black;
+  }
 `;
 
 export const CardContent = styled.div`
